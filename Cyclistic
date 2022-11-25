@@ -202,7 +202,7 @@ all_trips_v2 %>%
   arrange(member_casual, month) %>%
   ggplot(aes(x = month, y = average_duration, fill = member_casual)) + 
   geom_col(position = "dodge") +
-  labs(title = "Average ride by month", x = "", y = "Ride Time (Minutes)", fill = "Rider Type") +
+  labs(title = "Average Ride by Month", x = "", y = "Ride Time (Minutes)", fill = "Rider Type") +
   theme(plot.title = element_text(hjust = 0.5))
 
 # Visualize avg riders by month
@@ -223,5 +223,5 @@ all_trips_v2 %>%
   group_by(end_station_name) %>%
   summarize(n = n()) %>%
   arrange(desc(n)) %>%
-  head(10) %>%
+  head(10)
 ```
